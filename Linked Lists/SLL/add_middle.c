@@ -1,4 +1,4 @@
-//Program to create single linked list using add_middle method
+//Program to create single linked list using "sort while inserting nodes" method
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct student
@@ -9,7 +9,7 @@ typedef struct student
   struct student *next;
 }ST;
 
-void add_middle(ST **ptr)
+void sort_insert(ST **ptr)
 {
   ST *temp;
   temp=(ST*)malloc(sizeof(ST));
@@ -54,7 +54,7 @@ int main()
   char ch;
   do
   {
-    add_middle(&hptr);
+    sort_insert(&hptr);
     printf("Do you want to continue(y/n)\n");
     scanf(" %c",&ch);
   }while(ch=='y'||ch=='Y');
